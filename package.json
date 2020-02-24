@@ -1,6 +1,6 @@
 {
   "name": "TS_Number_Guess_Quiz",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "MDN | 数字当てクイズ",
   "main": "index.js",
   "scripts": {
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/nari19/TS_Number_Guess_Quiz/issues"
   },
-  "homepage": "https://github.com/nari19/TS_Number_Guess_Quiz#readme"
+  "homepage": "https://github.com/nari19/TS_Number_Guess_Quiz#readme",
+  "devDependencies": {
+    "@types/node": "^13.7.4",
+    "typescript": "^3.8.2"
+  }
 }
