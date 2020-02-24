@@ -1,0 +1,20 @@
+{
+  "name": "TS_Number_Guess_Quiz",
+  "version": "1.0.0",
+  "description": "MDN | 数字当てクイズ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nari19/TS_Number_Guess_Quiz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nari19/TS_Number_Guess_Quiz/issues"
+  },
+  "homepage": "https://github.com/nari19/TS_Number_Guess_Quiz#readme"
+}
