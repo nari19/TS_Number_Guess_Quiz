@@ -2,9 +2,15 @@
   "name": "TS_Number_Guess_Quiz",
   "version": "0.1.0",
   "description": "MDN | 数字当てクイズ",
-  "main": "index.js",
+  "main": "src/dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node src/script/index.ts",
+    "dev:watch": "ts-node-dev --respawn src/script/index.ts",
+    "clean": "rimraf dist/*",
+    "format": "prettier-eslint --write 'src/**/*.ts'",
+    "tsc": "tsc",
+    "build": "npm-run-all clean format tsc",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
@@ -19,6 +25,14 @@
   "homepage": "https://github.com/nari19/TS_Number_Guess_Quiz#readme",
   "devDependencies": {
     "@types/node": "^13.7.4",
+    "eslint-config-google": "^0.14.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1",
+    "prettier-eslint": "^9.0.1",
+    "prettier-eslint-cli": "^5.0.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.6.2",
+    "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.8.2"
   }
 }

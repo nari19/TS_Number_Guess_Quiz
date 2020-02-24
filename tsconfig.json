@@ -3,11 +3,11 @@
     "target": "ES2019",
     "module": "commonjs",
     "sourceMap": true,
-    "outDir": "./dist",
+    "outDir": "./src/dist",
     "strict": true,
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "script/**/*"    
+    "src/script/**/*"    
   ],
 }
