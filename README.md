@@ -10,7 +10,7 @@ MDN | 数字当てクイズ
     どうだったかも表示する。ゲームはプレイヤーの予想が正しかった場合、もしくは回数の上限に達した場合に終了する。
     ゲームが終了したら、プレイヤーはもう一度プレイ開始できるようにする。
 
-## memo
+## Link
 
 - [TypeScript + Node.js プロジェクトのはじめかた2019](https://qiita.com/notakaos/items/3bbd2293e2ff286d9f49)
 - [eslint, prettier導入](https://ics.media/entry/17030/)
