@@ -1,9 +1,9 @@
 "use strict";
 (() => {
-    const randomNum = Math.floor(Math.random() * 99) + 1;
+    const randomNum = Math.floor(Math.random() * 100) + 1;
     console.log(randomNum);
     const btn = (document.getElementById('btn'));
-    btn.addEventListener('click', function () {
+    btn.onclick = () => {
         const numberValue = document.forms[0].number.value;
         if (isNaN(numberValue)) {
             alert("数字で入力してください");
@@ -22,6 +22,6 @@
                 alert("正解!!");
             }
         }
-    }, false);
+    };
 })();
 //# sourceMappingURL=index.js.map
