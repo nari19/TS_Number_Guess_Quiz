@@ -25,11 +25,11 @@
             clickTimesText.innerHTML = `${clickTimes}`;
             // 結果の表示
             if (numberValue > randomNum) {
-                alert("答えよりも小さいよ!!");
+                alert("答えよりも大きいよ!!");
                 lastMistake();
             }
             else if (numberValue < randomNum) {
-                alert("答えよりも大きいよ!!");
+                alert("答えよりも小さいよ!!");
                 lastMistake();
             }
             else {
@@ -39,11 +39,10 @@
         }
         // 入力フォームの値を空にする
         document.forms[0].number.value = "";
-        console.log(numberValue);
         // ユーザが負けた時のメッセージ・データの初期化
         function lastMistake() {
             if (clickTimes == 0) {
-                alert("残念！！10回までに正解できませんでした...");
+                alert(`残念！！10回までに正解できませんでした... 答え[${randomNum}]`);
                 reGenerate();
             }
         }
@@ -53,7 +52,6 @@
             randomNum = Math.floor(Math.random() * 100) + 1;
             clickTimes = 10;
             clickTimesText.innerHTML = `${clickTimes}`;
-            console.log(randomNum);
         }
         ;
     };

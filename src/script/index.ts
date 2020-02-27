@@ -2,6 +2,7 @@
 
   // ランダムな数を生成
   let randomNum: number = Math.floor(Math.random() * 100) + 1;
+  console.log(randomNum);
 
   // 挑戦できる残りの回数
   let clickTimes: number = 10;
@@ -26,10 +27,10 @@
 
       // 結果の表示
       if (numberValue > randomNum) {
-        alert("答えよりも小さいよ!!");
+        alert("答えよりも大きいよ!!");
         lastMistake();
       } else if (numberValue < randomNum) {
-        alert("答えよりも大きいよ!!");
+        alert("答えよりも小さいよ!!");
         lastMistake();
       } else {
         alert(`正解!! [${randomNum}] (新しい数字を生成します)`);
@@ -42,7 +43,7 @@
     // ユーザが負けた時のメッセージ・データの初期化
     function lastMistake(): void {
       if(clickTimes == 0){
-        alert("残念！！10回までに正解できませんでした...");
+        alert(`残念！！10回までに正解できませんでした... 答え[${randomNum}]`);
         reGenerate();
       }
     };
