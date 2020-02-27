@@ -1,19 +1,22 @@
-const main = (): void => {
-  const randomNum: number = Math.floor(Math.random() * 99) + 1;
+((): void => {
+  const randomNum: number = Math.floor(Math.random() * 100) + 1;
+  console.log(randomNum); 
   const btn: HTMLInputElement = <HTMLInputElement>(document.getElementById('btn'));
-  btn.addEventListener('click', btnClickEvent, false);
 
-  // フォームの値を取得
-  function btnClickEvent(): void {
-    const numberValue: number = document.forms[0].number.value;
+  btn.onclick = () => {
+    const numberValue = document.forms[0].number.value;
     if (isNaN(numberValue)) {
-      alert(`数字で入力してください`);
+      alert("数字で入力してください");
     } else if(numberValue > 100 || numberValue < 1) {
-      alert(`1から100の数字を入力してください`);
+      alert("1から100の数字を入力してください");
     } else {
-      alert(randomNum);
+      if (numberValue > randomNum) {
+        alert("大きいよ!!");
+      } else if(numberValue < randomNum) {
+        alert("小さいよ!!");
+      } else {
+        alert("正解!!");
+      }
     }
-  }
-};
-
-main();
+  };
+})();
