@@ -28,7 +28,7 @@ MDN | 数字当てクイズ
 // コンパイル　下記で活用
 "tsc": "tsc",
 // TypeScript -> JavaScript に変換
-"build": "npm-run-all clean tsc",
+"build": "npm-run-all clean format tsc",
 // 生成されたJavaScriptを実行
 "start": "node ."
 // コードフォーマット実行
