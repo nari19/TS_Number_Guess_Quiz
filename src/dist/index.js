@@ -5,14 +5,10 @@
     console.log(randomNum);
     // 挑戦できる残りの回数
     let clickTimes = 10;
-    const clickTimesText = document.getElementById('clickTimesText');
-    clickTimesText.innerHTML = `${clickTimes}`;
-    // 
-    const beforeAns = document.getElementById('beforeAns');
-    beforeAns.innerHTML = "";
-    // 
-    const afterAns = document.getElementById('afterAns');
-    afterAns.innerHTML = "";
+    const clickTimesText = htmlGenerate("clickTimesText", `${clickTimes}`);
+    // 回答履歴の生成
+    const beforeAns = htmlGenerate("beforeAns", "");
+    const afterAns = htmlGenerate("afterAns", "");
     // "予想を入力"ボタンのクリックイベント
     const btn = (document.getElementById('btn'));
     btn.onclick = () => {
@@ -63,5 +59,10 @@
         }
         ;
     };
+    function htmlGenerate(idName, htmlDate) {
+        const getMyElement = document.getElementById(idName);
+        getMyElement.innerHTML = htmlDate;
+        return getMyElement;
+    }
 })();
 //# sourceMappingURL=index.js.map
