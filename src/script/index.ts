@@ -32,7 +32,6 @@ import { htmlGenerate } from './constant';
   // ---------------------------------------------------------------------------------
 
 
-  // ---------------------------------------------------------------------------------
   // "予想を入力"ボタンのクリックイベント
   const btn: HTMLInputElement = <HTMLInputElement>(document.getElementById('btn'));
   btn.onclick = (): void => {
@@ -66,5 +65,4 @@ import { htmlGenerate } from './constant';
     // 入力フォームの値を空にする
     document.forms[0].number.value = "";
   };
-  // ---------------------------------------------------------------------------------
 })();
