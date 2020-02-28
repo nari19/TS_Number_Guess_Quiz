@@ -7,6 +7,12 @@
     let clickTimes = 10;
     const clickTimesText = document.getElementById('clickTimesText');
     clickTimesText.innerHTML = `${clickTimes}`;
+    // 
+    const beforeAns = document.getElementById('beforeAns');
+    beforeAns.innerHTML = "";
+    // 
+    const afterAns = document.getElementById('afterAns');
+    afterAns.innerHTML = "";
     // "予想を入力"ボタンのクリックイベント
     const btn = (document.getElementById('btn'));
     btn.onclick = () => {
@@ -26,10 +32,12 @@
             // 結果の表示
             if (numberValue > randomNum) {
                 alert("答えよりも大きいよ!!");
+                afterAns.innerHTML += ` ${numberValue}, `;
                 lastMistake();
             }
             else if (numberValue < randomNum) {
                 alert("答えよりも小さいよ!!");
+                beforeAns.innerHTML += ` ${numberValue}, `;
                 lastMistake();
             }
             else {
