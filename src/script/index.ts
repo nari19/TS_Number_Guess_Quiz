@@ -1,5 +1,8 @@
+import { htmlGenerate } from './constant';
+
 ((): void => {  // 即時関数
 
+  // ---------------------------------------------------------------------------------
   // ランダムな数を生成
   let randomNum: number = Math.floor(Math.random() * 100) + 1;
   console.log(randomNum);
@@ -12,6 +15,24 @@
   const beforeAns: HTMLElement = htmlGenerate("beforeAns", "");
   const afterAns: HTMLElement = htmlGenerate("afterAns", "");
 
+
+  // ランダムな文字列・挑戦できる残り回数、のリセット
+  const reGenerate = ():void => {
+      randomNum = Math.floor(Math.random() * 100) + 1;
+      clickTimes = 10;
+      clickTimesText.innerHTML = `${clickTimes}`;
+  };
+  // ユーザが負けた時のメッセージ・データの初期化
+  const lastMistake = (): void => {
+    if(clickTimes == 0){
+      alert(`残念！！10回までに正解できませんでした... 答え[${randomNum}]`);
+      reGenerate();
+    }
+  };
+  // ---------------------------------------------------------------------------------
+
+
+  // ---------------------------------------------------------------------------------
   // "予想を入力"ボタンのクリックイベント
   const btn: HTMLInputElement = <HTMLInputElement>(document.getElementById('btn'));
   btn.onclick = (): void => {
@@ -44,27 +65,6 @@
     }
     // 入力フォームの値を空にする
     document.forms[0].number.value = "";
-
-    // ユーザが負けた時のメッセージ・データの初期化
-    function lastMistake(): void {
-      if(clickTimes == 0){
-        alert(`残念！！10回までに正解できませんでした... 答え[${randomNum}]`);
-        reGenerate();
-      }
-    };
-
-    // ランダムな文字列・挑戦できる残り回数、のリセット
-    function reGenerate():void {
-       randomNum = Math.floor(Math.random() * 100) + 1;
-       clickTimes = 10;
-       clickTimesText.innerHTML = `${clickTimes}`;
-    };
-
   };
-
-  function htmlGenerate(idName: string, htmlDate: string): HTMLElement {
-    const getMyElement: HTMLElement = <HTMLElement>document.getElementById(idName);
-    getMyElement.innerHTML = htmlDate;
-    return getMyElement;
- }
+  // ---------------------------------------------------------------------------------
 })();
